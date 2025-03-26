@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.WastingMisaka"
-version = "1.0.3"
+version = "1.0.3-FIX1"
 
 repositories {
     mavenCentral()

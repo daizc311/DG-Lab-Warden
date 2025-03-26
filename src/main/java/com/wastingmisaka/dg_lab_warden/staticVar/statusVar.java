@@ -5,17 +5,17 @@ import org.eclipse.jetty.websocket.api.Session;
 
 public class statusVar {
     // 程序的状态
-    public static int MainFunction = 0;
+    public static volatile int MainFunction = 0;
     // 一键开火状态
-    public static int firing = 0;
+    public static volatile int firing = 0;
     // A通道开关
-    public static boolean a_enabled = false;
+    public static volatile boolean a_enabled = false;
     // B通道开关
-    public static boolean b_enabled = false;
+    public static volatile boolean b_enabled = false;
     // 警告惩罚
-    public static boolean warning_enabled = false;
+    public static volatile boolean warning_enabled = false;
     // 错误惩罚
-    public static boolean error_enabled = false;
+    public static volatile boolean error_enabled = false;
 
 
     // 服务器IP
@@ -28,8 +28,8 @@ public class statusVar {
     public static Session progress_session = null;
 
     // 当前页面警告数
-    public static long warning_count = 0;
+    public static volatile long warning_count = 0;
     // 当前页面错误数
-    public static long error_count = 0;
+    public static volatile long error_count = 0;
 
 }

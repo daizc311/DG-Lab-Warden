@@ -15,7 +15,8 @@ public class inspectionPunish extends Thread{
     long error_weight = 10;
     MessageSender messageSender = new MessageSender();
     public void run() {
-        while(true){
+        boolean flag = true;
+        while (flag) {
             if(progress_session==null){
                 try {
                     error_active = 0;
@@ -23,7 +24,7 @@ public class inspectionPunish extends Thread{
                     Thread.sleep(1000);
                     continue;
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    flag = false;
                 }
             }
             // 静态代码检查 警告、错误数变化
@@ -56,7 +57,7 @@ public class inspectionPunish extends Thread{
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                flag = false;
             }
         }
    }
