@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.17.3"
+    id("org.jetbrains.intellij") version "1.17.4"
 }
 
 group = "com.WastingMisaka"
@@ -11,7 +11,7 @@ repositories {
 }
 
 intellij {
-    version.set("2023.2.6")
+    version.set("2024.1.7")
     type.set("IC") // Target IDE Platform IC/IU
 
     plugins.set(listOf(/* Plugin Dependencies */))
@@ -25,8 +25,8 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("232")
-        untilBuild.set("242.*")
+        sinceBuild.set("241")
+        untilBuild.set("243.*")
     }
 
     signPlugin {
